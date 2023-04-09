@@ -4,6 +4,7 @@
   --box-shadow-color: #4c4c4c;
   --title-after-color: #ff7e79;
   --title2-after-color: #bdd7ee;
+  --title3-after-color: #5dd2a6;
   /*  */
   --main-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -72,13 +73,19 @@ img {
   font-weight: 500;
 }
 .title,
-.title-2 {
+.title-2,
+.title-3 {
   width: max-content;
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+.conference-year {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .title::after {
   background: var(--title-after-color);
@@ -90,7 +97,12 @@ img {
   height: 5px;
   content: "";
 }
-/*  */
+.title-3::after {
+  background: var(--title3-after-color);
+  height: 5px;
+  content: "";
+}
+/* */
 
 /* Apresentação */
 .main-container {
@@ -273,10 +285,6 @@ img {
     display: flex;
     flex-direction: column;
   }
-  .main-presentation > div {
-    border-bottom: 1px solid var(--box-shadow-color);
-    padding-bottom: 50px;
-  }
   .about-me {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -304,8 +312,8 @@ img {
 }
 @media (max-width: 520px) {
   .main-presentation > div {
-    border-bottom: 1px solid var(--box-shadow-color);
-    padding-bottom: 30px;
+    border: none;
+    padding-bottom: 0px;
   }
   .main-title {
     font-size: var(--font-main-title-12);
@@ -314,9 +322,6 @@ img {
   .title,
   .title-2 {
     font-size: var(--font-title-1);
-  }
-  .desc {
-    font-size: var(--font-p-0775);
   }
   .about-me {
     font-size: var(--font-p-0775);
@@ -356,18 +361,24 @@ img {
   grid-template-columns: 1fr 1fr;
 }
 .tapps-intro {
+  margin-top: 30px;
   grid-column: 1;
+}
+.tapps-intro > img {
+  width: 270px;
 }
 .tapps-games > div h2 {
   margin-bottom: 35px;
 }
 .tapps-games div + div {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .tapps-assignments {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+.tapps-assignments h3{
+  margin-bottom: 20px;
 }
 .tapps-assignments ul li {
   font-weight: 500;
@@ -383,9 +394,194 @@ img {
   .tapps-games {
     display: flex;
     flex-direction: column;
+    gap: 0px;
   }
-  .logo-2{
+  .tapps-intro {
+    margin-bottom: 35px;
+  }
+  .logo-2 {
     width: 320px;
   }
 }
+
+@media (max-width: 500px) {
+  .tapps-assignments ul li {
+    font-size: 0.8rem;
+    margin-left: 15px;
+  }
+}
 /*  */
+
+/* GRUPO FLEURY */
+.group-fleury {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.group-fleury-jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.group-fleury > h1 {
+  grid-column: span 3;
+}
+.logo-3 {
+  width: 230px;
+}
+.fleury-dre {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.fleury-bi {
+  border-top: 1px solid var(--box-shadow-color);
+}
+.fleury-bi > h2 {
+  margin-top: 20px;
+}
+.group-fleury h2 {
+  grid-column: span 2;
+  margin-bottom: 35px;
+}
+.fleury-outputs {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0px 35px;
+}
+.fleury-outputs-desc {
+  display: flex;
+  flex-direction: column;
+}
+.fleury-outputs-desc > p {
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+}
+.output{
+  border-bottom: 1px solid var(--box-shadow-color);
+  width: fit-content;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.group-fleury ul li {
+  font-weight: 500;
+  margin-left: 20px;
+  list-style: square;
+}
+.group-fleury ul li + li {
+  margin-top: 5px;
+}
+/*  */
+/* BI MEDICO*/
+.fleury-doctors-img {
+  width: 400px;
+}
+.fleury-outputs-bi {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+/*  */
+
+/* GLOBAL CONFERENCE ON PRIMARY HEALTH CARE */
+.global-conference-img {
+  width: 500px;
+}
+.conference-desc {
+  margin-top: 35px;
+  font-size: 1.1rem;
+}
+.fleury-conference p + p,
+.fleury-conference img + img {
+  margin-top: 35px;
+  font-size: 1.1rem;
+}
+.fleury-conference img + img {
+  width: 250px;
+}
+/*  */
+
+/* RESPONSIVEL */
+@media (max-width: 1300px) {
+  .group-fleury {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-3 {
+    width: 180px;
+  }
+  .global-conference-img {
+    width: 350px;
+  }
+  .global-conference-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .group-fleury-jobs {
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--box-shadow-color);
+  }
+}
+
+@media (max-width: 850px) {
+  .global-conference-images {
+    max-width: 450px;
+    grid-template-columns: 1fr;
+  }
+  .global-conference {
+    display: flex;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+  }
+}
+/*  */
+
+@media (max-width: 710px) {
+  .global-conference {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-3 {
+    width: auto;
+  }
+  .fleury-doctors-img {
+    width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .tapps-assignments:nth-child(5) ul li{
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  .outputs-desc {
+    grid-column: span 2;
+  }
+  .fleury-outputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  .group-fleury p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .logo-3 {
+    width: 140px;
+  }
+  .caderno-diplomata-img {
+    max-width: 150px;
+  }
+  .fleury-conference p + p,
+  .fleury-conference img + img {
+    margin-top: 20px;
+  }
+  .conference-desc {
+    margin-top: 5px;
+  }
+}
