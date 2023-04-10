@@ -19,6 +19,7 @@
   /*  */
   --font-main-title-15: 1.5rem;
   --font-title-12: 1.2rem;
+  --font-s: 0.9rem;
   --font-p-0875: 0.875rem;
   /*  */
   --font-main-title-12: 1.2rem;
@@ -428,7 +429,6 @@ img {
   .logo-2 {
     width: 320px;
   }
-
 }
 
 /*  */
@@ -559,16 +559,6 @@ img {
   }
 }
 @media (max-width: 500px) {
-  .fleury-outputs-desc ul li {
-    font-weight: 400;
-  }
-  .tapps-assignments:nth-child(5) ul li {
-    font-size: 0.92rem;
-    font-weight: 400;
-  }
-  .tapps-assignments:nth-child(5) ul li + li{
-    margin-top: 15px;
-  }
   .outputs-desc {
     grid-column: span 2;
   }
@@ -580,8 +570,17 @@ img {
   .fleury-outputs-desc p {
     font-weight: 400;
   }
-  .conference-desc > p:first-child {
-    font-size: 1rem;
+  .fleury-outputs-desc > p {
+    font-weight: 400;
+    font-size: var(--font-s);
+    margin-bottom: 35px;
+    margin-left: 5px;
+  }
+  .output {
+    font-size: var(--font-main-title-12);
+  }
+  .list-style li {
+    font-size: var(--font-p-0775);
   }
   .logo-3 {
     width: 140px;
@@ -592,9 +591,11 @@ img {
   .fleury-conference p + p,
   .fleury-conference img + img {
     margin-top: 20px;
+    font-size: var(--font-s);
   }
   .conference-desc {
     margin-top: 5px;
+    font-size: var(--font-s);
   }
 }
 /*  */
@@ -615,7 +616,6 @@ img {
 }
 .projects-desc {
   font-weight: 400;
-  font-size: 1.2rem;
 }
 .projects-app-desc {
   margin-top: 35px;
@@ -698,7 +698,7 @@ img {
   .projects-app-img {
     width: 130px;
   }
-  .list-style li{
+  .list-style li {
     font-weight: 400;
   }
 }
@@ -716,10 +716,7 @@ img {
     width: 250px;
   }
   .list-style {
-    font-size: 0.925rem;
-  }
-  .projects-desc {
-    font-size: var(--font-title-12);
+    font-size: var(--font-p-0875);
   }
   .fleury-campana-images .projects-app-img {
     width: 180px;
@@ -735,7 +732,7 @@ img {
     gap: 10px;
   }
   .projects-desc {
-    font-size: 1.05rem;
+    font-size: var(--font-s);
   }
 }
 
