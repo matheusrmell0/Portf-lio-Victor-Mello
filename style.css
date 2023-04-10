@@ -310,7 +310,7 @@ img {
     font-size: 1.4rem;
   }
   .list-style {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-left: 15px;
   }
   .main-presentation {
@@ -428,9 +428,7 @@ img {
   .logo-2 {
     width: 320px;
   }
-  .tapps-assignments .list-style li {
-    font-weight: 400;
-  }
+
 }
 
 /*  */
@@ -479,7 +477,7 @@ img {
 }
 .fleury-outputs-desc > p {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 35px;
 }
 
@@ -672,6 +670,9 @@ img {
 }
 
 @media (max-width: 1150px) {
+  .tapps-assignments .list-style li + li {
+    margin-top: 10px;
+  }
   .fleury-projects {
     grid-template-columns: auto;
     gap: 50px;
