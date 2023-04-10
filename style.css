@@ -102,6 +102,25 @@ img {
   height: 5px;
   content: "";
 }
+.output {
+  border-bottom: 1px solid var(--box-shadow-color);
+  width: fit-content;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.list-style {
+  font-weight: 500;
+  margin-left: 20px;
+  list-style: square;
+}
+.list-style li {
+  list-style: square;
+}
+.list-style li + li {
+  margin-top: 5px;
+}
 /* */
 
 /* Apresentação */
@@ -199,6 +218,9 @@ img {
   body {
     zoom: 1;
   }
+  .list-style {
+    font-size: 0.975rem;
+  }
   .logo {
     width: 150px;
   }
@@ -268,7 +290,7 @@ img {
     font-size: var(--font-title-12);
   }
   .desc {
-    font-size: var(--font-p-0875);
+    font-weight: 400;
   }
   .about-me {
     font-size: var(--font-p-0875);
@@ -280,6 +302,17 @@ img {
   }
 }
 @media (max-width: 735px) {
+  .desc {
+    font-size: var(--font-p-0875);
+    font-weight: 400;
+  }
+  .output {
+    font-size: 1.4rem;
+  }
+  .list-style {
+    font-size: 0.9rem;
+    margin-left: 15px;
+  }
   .main-presentation {
     padding: 20px 25px;
     display: flex;
@@ -320,7 +353,8 @@ img {
     font-weight: 700;
   }
   .title,
-  .title-2 {
+  .title-2,
+  .title-3 {
     font-size: var(--font-title-1);
   }
   .about-me {
@@ -377,16 +411,8 @@ img {
   display: flex;
   flex-direction: column;
 }
-.tapps-assignments h3{
+.tapps-assignments h3 {
   margin-bottom: 20px;
-}
-.tapps-assignments ul li {
-  font-weight: 500;
-  margin-left: 20px;
-  list-style: square;
-}
-.tapps-assignments ul li + li {
-  margin-top: 5px;
 }
 
 /* Responsivel */
@@ -402,15 +428,14 @@ img {
   .logo-2 {
     width: 320px;
   }
-}
-
-@media (max-width: 500px) {
-  .tapps-assignments ul li {
-    font-size: 0.8rem;
-    margin-left: 15px;
+  .tapps-assignments .list-style li {
+    font-weight: 400;
   }
 }
+
 /*  */
+/* 
+ */
 
 /* GRUPO FLEURY */
 .group-fleury {
@@ -453,26 +478,11 @@ img {
   flex-direction: column;
 }
 .fleury-outputs-desc > p {
-  font-weight: 500;
-  font-size: 1.05rem;
+  font-weight: 400;
+  font-size: 1rem;
   margin-bottom: 35px;
 }
-.output{
-  border-bottom: 1px solid var(--box-shadow-color);
-  width: fit-content;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-.group-fleury ul li {
-  font-weight: 500;
-  margin-left: 20px;
-  list-style: square;
-}
-.group-fleury ul li + li {
-  margin-top: 5px;
-}
+
 /*  */
 /* BI MEDICO*/
 .fleury-doctors-img {
@@ -496,7 +506,7 @@ img {
 .fleury-conference p + p,
 .fleury-conference img + img {
   margin-top: 35px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .fleury-conference img + img {
   width: 250px;
@@ -525,7 +535,6 @@ img {
     border-bottom: 1px solid var(--box-shadow-color);
   }
 }
-
 @media (max-width: 850px) {
   .global-conference-images {
     max-width: 450px;
@@ -538,8 +547,6 @@ img {
     gap: 20px;
   }
 }
-/*  */
-
 @media (max-width: 710px) {
   .global-conference {
     display: flex;
@@ -553,11 +560,16 @@ img {
     width: auto;
   }
 }
-
 @media (max-width: 500px) {
-  .tapps-assignments:nth-child(5) ul li{
-    font-size: 0.9rem;
+  .fleury-outputs-desc ul li {
     font-weight: 400;
+  }
+  .tapps-assignments:nth-child(5) ul li {
+    font-size: 0.92rem;
+    font-weight: 400;
+  }
+  .tapps-assignments:nth-child(5) ul li + li{
+    margin-top: 15px;
   }
   .outputs-desc {
     grid-column: span 2;
@@ -567,9 +579,11 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 5px;
   }
-  .group-fleury p {
-    font-size: 1rem;
+  .fleury-outputs-desc p {
     font-weight: 400;
+  }
+  .conference-desc > p:first-child {
+    font-size: 1rem;
   }
   .logo-3 {
     width: 140px;
@@ -583,5 +597,177 @@ img {
   }
   .conference-desc {
     margin-top: 5px;
+  }
+}
+/*  */
+/* 
+ */
+/* 2019: GRUPO FLEURY */
+.fleury-projects {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 100px;
+}
+.fleury-project-1,
+.fleury-project-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.projects-desc {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.projects-app-desc {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+/*
+ */
+.fleury-project-1 .projects-app-img {
+  width: 300px;
+}
+.projects-app-img {
+  width: 250px;
+}
+.campana-img-site {
+  width: 600px;
+}
+.fleury-campana-images {
+  display: flex;
+  gap: 35px;
+}
+
+/* 
+ */
+/* RESPONSIVO */
+@media (max-width: 1300px) {
+  .fleury-campana-images {
+    flex-wrap: wrap;
+  }
+  .fleury-projects {
+    grid-template-columns: 1fr auto;
+    gap: 70px;
+  }
+  .fleury-project-1 {
+    grid-column: 2;
+  }
+  .fleury-project-2 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .campana-img-site {
+    width: 450px;
+  }
+  .projects-app-img {
+    width: 200px;
+  }
+  .projects-desc:nth-child(1) {
+    padding-top: 15px;
+    border-top: 1px solid var(--box-shadow-color);
+  }
+}
+
+@media (max-width: 1150px) {
+  .fleury-projects {
+    grid-template-columns: auto;
+    gap: 50px;
+  }
+  .projects-app-img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 800px) {
+  .campana-img-site {
+    width: 320px;
+  }
+  .projects-app-img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 720px) {
+  .campana-img-site {
+    width: 300px;
+  }
+  .projects-app-img {
+    width: 130px;
+  }
+  .list-style li{
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 680px) {
+  .fleury-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects-app-home {
+    display: flex;
+    gap: 35px;
+  }
+  .projects-app-home .projects-app-img {
+    width: 250px;
+  }
+  .list-style {
+    font-size: 0.925rem;
+  }
+  .projects-desc {
+    font-size: var(--font-title-12);
+  }
+  .fleury-campana-images .projects-app-img {
+    width: 180px;
+  }
+  .campana-img-site {
+    width: 400px;
+  }
+}
+
+@media (max-width: 570px) {
+  .projects-app-home {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .projects-desc {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 465px) {
+  .fleury-campana-images .projects-app-img {
+    width: 170px;
+  }
+  .campana-img-site {
+    width: 360px;
+  }
+  .fleury-campana-images {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .fleury-campana-images .projects-app-img {
+    width: 150px;
+  }
+  .campana-img-site {
+    width: 320px;
+  }
+}
+
+@media (max-width: 390px) {
+  .fleury-campana-images .projects-app-img {
+    width: 280px;
+  }
+  .campana-img-site {
+    width: 280px;
+  }
+  .projects-desc:nth-child(1) {
+    padding-top: 15px;
+    border-top: 1px solid var(--box-shadow-color);
   }
 }
