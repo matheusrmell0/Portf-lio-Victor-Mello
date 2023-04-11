@@ -17,14 +17,16 @@
   --main-spacing-30x80: 30px 80px;
   --main-spacing-30x55: 30px 55px;
   /*  */
-  --font-main-title-15: 1.5rem;
-  --font-title-12: 1.2rem;
+  --font-xxxl: 2rem;
+  --font-xxx: 1.875rem;
+  --font-xxl: 1.5rem;
+  --font-xl: 1.4rem;
+  --font-l: 1.2rem;
+  --font-m: 1rem;
   --font-s: 0.9rem;
-  --font-p-0875: 0.875rem;
-  /*  */
-  --font-main-title-12: 1.2rem;
-  --font-title-1: 1rem;
-  --font-p-0775: 0.775rem;
+  --font-xs: 0.875rem;
+  --font-xss: 0.795rem;
+  --font-xsl: 0.775rem;
 }
 
 /* Reset CSS */
@@ -67,7 +69,7 @@ img {
 
 /* Classes gerais */
 .main-title {
-  font-size: 2rem;
+  font-size: var(--font-xxxl);
   padding-bottom: 10px;
   border-bottom: 1px solid var(--box-shadow-color);
   text-transform: uppercase;
@@ -84,7 +86,7 @@ img {
   gap: 2px;
 }
 .conference-year {
-  font-size: 1.875rem;
+  font-size: var(--font-xxx);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -122,6 +124,12 @@ img {
 .list-style li + li {
   margin-top: 5px;
 }
+.main-presentation .paragraph {
+  font-size: var(--font-m);
+}
+.paragraph {
+  font-size: var(--font-l);
+}
 /* */
 
 /* Apresentação */
@@ -133,22 +141,18 @@ img {
   display: grid;
   grid-template-columns: auto 2fr;
 }
-
 .main-presentation > h1 {
   grid-column: span 2;
 }
-
 .profile-pic {
   width: 167px;
   margin-bottom: 20px;
 }
-
 .about-me {
   display: flex;
   flex-direction: column;
   gap: 35px;
 }
-
 .about-me ul {
   padding-bottom: 20px;
   border-bottom: 1px solid var(--box-shadow-color);
@@ -157,17 +161,14 @@ img {
   flex-direction: column;
   gap: 10px;
 }
-
 .about-me h3 {
   font-weight: 400;
   margin-bottom: 15px;
 }
-
 .social-media {
   display: flex;
   gap: 20px;
 }
-
 /*  */
 
 /* Apresentação - Formação */
@@ -178,18 +179,15 @@ img {
   justify-content: center;
   margin: 0 auto;
 }
-
 .formation img + img {
   margin-left: 35px;
 }
-
 .formation > div {
   display: grid;
   padding-bottom: 15px;
   border-bottom: 1px solid var(--box-shadow-color);
   height: fit-content;
 }
-
 .formation-desc {
   font-weight: 500;
   margin-top: 35px;
@@ -198,7 +196,6 @@ img {
   flex-direction: column;
   gap: 2px;
 }
-
 .formation-line1,
 .formation-line2,
 .formation-line3 {
@@ -220,7 +217,7 @@ img {
     zoom: 1;
   }
   .list-style {
-    font-size: 0.975rem;
+    font-size: var(--font-m);
   }
   .logo {
     width: 150px;
@@ -245,7 +242,6 @@ img {
     grid-column: auto;
     grid-row: auto;
   }
-
   .formation-line3,
   .formation-line4,
   .formation-line5 {
@@ -255,7 +251,6 @@ img {
     align-items: center;
     gap: 25px;
   }
-
   .formation-line3 .formation-desc,
   .formation-line4 .formation-desc,
   .formation-line5 .formation-desc {
@@ -283,19 +278,18 @@ img {
 }
 @media (max-width: 880px) {
   .main-title {
-    font-size: var(--font-main-title-15);
+    font-size: var(--font-xxl);
     font-weight: 700;
   }
   .title,
   .title-2 {
-    font-size: var(--font-title-12);
+    font-size: var(--font-l);
   }
-  .desc {
-    font-weight: 400;
+  .about-me,
+  .main-presentation .paragraph {
+    font-size: var(--font-m);
   }
-  .about-me {
-    font-size: var(--font-p-0875);
-  }
+
   .about-me ul {
     padding-bottom: 15px;
     font-weight: 400;
@@ -303,15 +297,11 @@ img {
   }
 }
 @media (max-width: 735px) {
-  .desc {
-    font-size: var(--font-p-0875);
-    font-weight: 400;
-  }
   .output {
-    font-size: 1.4rem;
+    font-size: var(--font-xl);
   }
   .list-style {
-    font-size: 1rem;
+    font-size: var(--font-m);
     margin-left: 15px;
   }
   .main-presentation {
@@ -322,7 +312,7 @@ img {
   .about-me {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 20px 50px;
+    gap: 20px 35px;
   }
   .about-me h2,
   .profile-pic {
@@ -350,16 +340,17 @@ img {
     padding-bottom: 0px;
   }
   .main-title {
-    font-size: var(--font-main-title-12);
+    font-size: var(--font-l);
     font-weight: 700;
   }
   .title,
   .title-2,
   .title-3 {
-    font-size: var(--font-title-1);
+    font-size: var(--font-m);
   }
-  .about-me {
-    font-size: var(--font-p-0775);
+  .about-me,
+  .main-presentation .paragraph {
+    font-size: var(--font-xs);
   }
   .profile-pic {
     width: 120px;
@@ -369,18 +360,19 @@ img {
   .about-me {
     display: flex;
   }
+  .formation {
+    margin-top: 35px;
+  }
   .main-presentation {
     padding-right: 30px;
   }
-  .desc {
-    font-size: var(--font-p-0775);
-  }
   .formation-desc {
-    font-weight: 400;
+    font-weight: 500;
     gap: 4px;
   }
-  .formation-desc > p {
-    font-weight: 500;
+  .about-me,
+  .main-presentation .paragraph {
+    font-size: var(--font-xsl);
   }
 }
 /*  */
@@ -414,6 +406,9 @@ img {
 }
 .tapps-assignments h3 {
   margin-bottom: 20px;
+}
+.tapps-assignments .output {
+  margin-bottom: 15px;
 }
 
 /* Responsivel */
@@ -475,11 +470,6 @@ img {
   display: flex;
   flex-direction: column;
 }
-.fleury-outputs-desc > p {
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-bottom: 35px;
-}
 
 /*  */
 /* BI MEDICO*/
@@ -491,6 +481,9 @@ img {
   flex-direction: column;
   gap: 35px;
 }
+.fleury-outputs-desc > p {
+  margin-bottom: 35px;
+}
 /*  */
 
 /* GLOBAL CONFERENCE ON PRIMARY HEALTH CARE */
@@ -499,12 +492,12 @@ img {
 }
 .conference-desc {
   margin-top: 35px;
-  font-size: 1.1rem;
+  font-size: var(--font-l);
 }
 .fleury-conference p + p,
 .fleury-conference img + img {
   margin-top: 35px;
-  font-size: 1.2rem;
+  font-size: var(--font-l);
 }
 .fleury-conference img + img {
   width: 250px;
@@ -565,25 +558,20 @@ img {
   .fleury-outputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
-  }
-  .fleury-outputs-desc p {
-    font-weight: 400;
-  }
-  .fleury-outputs-desc > p {
-    font-weight: 400;
-    font-size: var(--font-s);
-    margin-bottom: 35px;
-    margin-left: 5px;
+    gap: 5px 20px;
   }
   .output {
-    font-size: var(--font-main-title-12);
+    font-size: var(--font-l);
   }
   .list-style li {
-    font-size: var(--font-p-0775);
+    font-size: var(--font-xs);
+    line-height: 1.4;
   }
   .logo-3 {
     width: 140px;
+  }
+  .fleury-outputs .logo-3 {
+    width: 180px;
   }
   .caderno-diplomata-img {
     max-width: 150px;
@@ -597,6 +585,9 @@ img {
     margin-top: 5px;
     font-size: var(--font-s);
   }
+  .paragraph {
+    font-size: var(--font-s);
+  }
 }
 /*  */
 /* 
@@ -608,14 +599,14 @@ img {
   grid-template-columns: auto 1fr;
   gap: 100px;
 }
+.fleury-projects .paragraph:first-child {
+  margin-top: 15px;
+}
 .fleury-project-1,
 .fleury-project-2 {
   display: flex;
   flex-direction: column;
   gap: 35px;
-}
-.projects-desc {
-  font-weight: 400;
 }
 .projects-app-desc {
   margin-top: 35px;
@@ -663,16 +654,14 @@ img {
   .projects-app-img {
     width: 200px;
   }
-  .projects-desc:nth-child(1) {
+  .fleury-project-2 .paragraph:nth-child(1),
+  .fleury-project-1 .paragraph:nth-child(1) {
     padding-top: 15px;
     border-top: 1px solid var(--box-shadow-color);
   }
 }
 
 @media (max-width: 1150px) {
-  .tapps-assignments .list-style li + li {
-    margin-top: 10px;
-  }
   .fleury-projects {
     grid-template-columns: auto;
     gap: 50px;
@@ -716,7 +705,7 @@ img {
     width: 250px;
   }
   .list-style {
-    font-size: var(--font-p-0875);
+    font-size: var(--font-s);
   }
   .fleury-campana-images .projects-app-img {
     width: 180px;
@@ -758,14 +747,41 @@ img {
 }
 
 @media (max-width: 390px) {
-  .fleury-campana-images .projects-app-img {
-    width: 280px;
-  }
+  .fleury-campana-images .projects-app-img,
   .campana-img-site {
-    width: 280px;
+    width: 230px;
   }
-  .projects-desc:nth-child(1) {
-    padding-top: 15px;
-    border-top: 1px solid var(--box-shadow-color);
+  .main-presentation .paragraph {
+    font-size: var(--font-xsl);
+  }
+  .projects-app-home .projects-app-img {
+    width: 220px;
+  }
+  .formation .paragraph {
+    font-size: var(--font-xsl);
+    font-weight: 500;
+  }
+  .paragraph {
+    font-size: var(--font-m);
+    font-weight: 400;
+  }
+  .list-style li {
+    font-size: var(--font-xss);
+  }
+  .list-style li + li {
+    margin-top: 10px;
+  }
+  .about-me li + li {
+    margin-top: 2px;
+    font-size: var(--font-xss);
+  }
+  .tapps-assignments h3 {
+    font-size: var(--font-s);
+  }
+  .output {
+    font-size: var(--font-m);
+  }
+  .fleury-projects .paragraph:first-child {
+    margin-top: 0;
   }
 }
