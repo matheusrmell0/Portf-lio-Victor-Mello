@@ -755,10 +755,10 @@ img {
   .campana-img-site {
     width: 280px;
   }
-  .fleury-campana-images{
+  .fleury-campana-images {
     margin-left: 10px;
   }
- 
+
   .projects-app-home .projects-app-img {
     width: 220px;
   }
@@ -793,5 +793,85 @@ img {
   .main-presentation .paragraph {
     font-size: var(--font-xss);
     font-weight: 400;
+  }
+}
+/* 
+ */
+/* 2020-2021: DASA */
+.dasa img {
+  width: 450px;
+}
+.dasa-project:first-child img{
+  width: 400px;
+}
+.dasa-projects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+.dasa-project {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.healthboard-images{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+/* 
+ */
+/* RESPONSIVO */
+@media(max-width: 1300px){
+  .dasa-projects-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .healthboard-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .dasa img {
+    width: 550px;
+  }
+  .dasa-project:first-child img{
+    width: 600px;
+  }
+  .dasa .paragraph:first-child{
+    padding-top: 25px;
+    border-top: 1px solid var(--box-shadow-color);
+  }
+}
+@media(max-width: 1215px){
+  .dasa-project:first-child img,
+  .dasa img {
+    width: 500px;
+  }
+  .healthboard-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    gap: 35px;
+  }
+}
+@media(max-width: 1100px){
+  .dasa-project:first-child img,
+  .dasa img {
+    width: 400px;
+  }
+}
+@media(max-width: 890px){
+  .healthboard-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    gap: 35px;
+  }
+  .dasa-project:first-child img,
+  .dasa img {
+    width: 500px;
   }
 }
