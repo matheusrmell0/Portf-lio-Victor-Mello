@@ -129,6 +129,7 @@ img {
 }
 .paragraph {
   font-size: var(--font-l);
+  margin-top: 10px;
 }
 /* */
 
@@ -550,6 +551,9 @@ img {
   .fleury-doctors-img {
     width: auto;
   }
+  .paragraph {
+    margin-top: 0px;
+  }
 }
 @media (max-width: 500px) {
   .outputs-desc {
@@ -609,7 +613,7 @@ img {
   gap: 35px;
 }
 .projects-app-desc {
-  margin-top: 35px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 35px;
