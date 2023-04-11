@@ -759,16 +759,17 @@ img {
 }
 
 @media (max-width: 390px) {
-  .fleury-campana-images .projects-app-img,
-  .campana-img-site {
-    width: 280px;
-  }
   .fleury-campana-images {
-    margin-left: 10px;
+    display: grid;
   }
-
+  .projects-app-img {
+    grid-row: 1;
+  }
+  .campana-img-site {
+    grid-column: span 2;
+  }
   .projects-app-home .projects-app-img {
-    width: 220px;
+    width: 180px;
   }
   .formation .paragraph {
     font-size: var(--font-xsl);
@@ -938,9 +939,10 @@ img {
     width: 500px;
   }
 }
+
 /* 
  */
- 
+
 /* INTEGER */
 .integer > h2 {
   margin-top: 30px;
@@ -961,7 +963,7 @@ img {
   margin-bottom: 35px;
 }
 .integer-images img {
-  width: 240px;
+  width: 220px;
 }
 .integer-images {
   display: flex;
