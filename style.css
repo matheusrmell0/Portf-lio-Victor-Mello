@@ -579,7 +579,7 @@ img {
   .fleury-conference p + p,
   .fleury-conference img + img {
     margin-top: 20px;
-    font-size: var(--font-s);
+    font-size: var(--font-m);
   }
   .conference-desc {
     margin-top: 5px;
@@ -762,11 +762,11 @@ img {
     font-weight: 500;
   }
   .paragraph {
-    font-size: var(--font-m);
+    font-size: var(--font-s);
     font-weight: 400;
   }
   .list-style li {
-    font-size: var(--font-xss);
+    font-size: var(--font-xs);
   }
   .list-style li + li {
     margin-top: 10px;
