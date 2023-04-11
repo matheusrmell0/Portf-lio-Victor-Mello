@@ -1,3 +1,16 @@
+/* Animações Js */
+.js [data-anime] {
+  opacity: 0;
+  transition: 0.4s;
+}
+.js [data-anime="anime"] {
+  transform: translate3d(0, -30px, 0);
+}
+.js [data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
 /* Variaveis */
 :root {
   --border-img-color: #b2b3b3;
@@ -927,6 +940,7 @@ img {
 }
 /* 
  */
+ 
 /* INTEGER */
 .integer > h2 {
   margin-top: 30px;
